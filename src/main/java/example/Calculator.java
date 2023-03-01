@@ -6,11 +6,11 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 public class Calculator implements RequestHandler<CalculatorInput, Integer> {
     @Override
     public Integer handleRequest(CalculatorInput input, Context context) {
-        Integer result = input.getN1() + input.getN2();
+        Integer output = input.getN1() + input.getN2();
 
         System.out.println(input);
-        System.out.println(result);
+        System.out.println(output);
 
-        return result;
+        return output;
     }
 }
